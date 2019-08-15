@@ -2,6 +2,14 @@ var result = "0";
 var storedValue = 0;
 var operator = ""
 
+//Clear
+function ce() {
+  storedValue = 0;
+  result = 0;
+  operator = "";
+  document.getElementById("result").innerHTML = result;
+}
+
 //Num Pad
 function digit0() {
   result = parseFloat(result + "0");
@@ -46,14 +54,47 @@ function digit9() {
 
 //Operations
 function addition() {
-  storedValue = result;
+  storedValue = parseFloat(result);
   result = 0;
   operator = "+";
+  document.getElementById("result").innerHTML = result;
+}
+function subtraction() {
+  storedValue = parseFloat(result);
+  result = 0;
+  operator = "-";
+  document.getElementById("result").innerHTML = result;
+}
+function multiplication() {
+  storedValue = parseFloat(result);
+  result = 0;
+  operator = "*";
+  document.getElementById("result").innerHTML = result;
+}
+function division() {
+  storedValue = parseFloat(result);
+  result = 0;
+  operator = "/";
+  document.getElementById("result").innerHTML = result;
 }
 
-//Clear
-function ce() {
-  result = 0;
-  operator = "";
-  document.getElementById("result").innerHTML = result;
+//Equals
+function equals() {
+  if (operator === "+") {
+    result = storedValue + result;
+    operator ="";
+    document.getElementById("result").innerHTML = result;
+  } else if (operator === "-") {
+    result = storedValue - result;
+    operator = "";
+    document.getElementById("result").innerHTML = result;
+  } else if (operator === "*") {
+    result = storedValue * result;
+    operator = "";
+    document.getElementById("result").innerHTML = result;
+  } else if (operator === "/") {
+    result = storedValue / result;
+    operator = "";
+    document.getElementById("result").innerHTML = result;
+  }
 }
