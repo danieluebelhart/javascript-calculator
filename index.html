@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1>Web Calculator</h1>
-  <p id="result">0</p>
-  </br>
-  <button id="numPad" onclick="digit1()">1</button>
-  <button id="numPad" onclick="digit2()">2</button>
-  <button id="numPad" onclick="digit3()">3</button>
-  -
-  <button id="operator" onclick="addition()">+</button>
-  <button id="operator" onclick="subtraction()">-</button>
-  <br>
-  <button id="numPad" onclick="digit4()">4</button>
-  <button id="numPad" onclick="digit5()">5</button>
-  <button id="numPad" onclick="digit6()">6</button>
-  -
-  <button id="operator" onclick="multiplication()">x</button>
-  <button id="operator" onclick="division()">/</button>
-  <br>
-  <button id="numPad" onclick="digit7()">7</button>
-  <button id="numPad" onclick="digit8()">8</button>
-  <button id="numPad" onclick="digit9()">9</button>
-  -
-  <button id="clear" onclick="ce()">CE</button>
-  <br>
-  <button id="num0" onclick="digit0()">0</button>
-  <button id="equals" onclick="equals()">=</button>
+  <div>
+    <p id="storedValue"> </p><p id="operator"></p>
+    <p id="result">0</p>
+  </div>
+  <div class="pad">
+    <button class="numPad" onclick="digit1()">1</button>
+    <button class="numPad" onclick="digit2()">2</button>
+    <button class="numPad" onclick="digit3()">3</button>
+    <button class="ce" onclick="ce()">CE</button>
+  </div>
+  <div class="pad">
+    <button class="numPad" onclick="digit4()">4</button>
+    <button class="numPad" onclick="digit5()">5</button>
+    <button class="numPad" onclick="digit6()">6</button>
+    <button class="operator" onclick="multiplication()">x</button>
+    <button class="operator" onclick="division()">/</button>
+  </div>
+  <div class="pad">
+    <button class="numPad" onclick="digit7()">7</button>
+    <button class="numPad" onclick="digit8()">8</button>
+    <button class="numPad" onclick="digit9()">9</button>
+    <button class="operator" onclick="addition()">+</button>
+    <button class="operator" onclick="subtraction()">-</button>
+  </div>
+  <div class="pad">
+    <button class="num0" onclick="digit0()">0</button>
+    <button class="equals" onclick="equals()">=</button>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>
