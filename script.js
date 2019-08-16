@@ -8,6 +8,8 @@ function ce() {
   result = 0;
   operator = "";
   document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = "";
+  document.getElementById("operator").innerHTML = "";
 }
 
 //Num Pad
@@ -58,43 +60,48 @@ function addition() {
   result = 0;
   operator = "+";
   document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = storedValue;
+  document.getElementById("operator").innerHTML = "&nbsp;+";
 }
 function subtraction() {
   storedValue = parseFloat(result);
   result = 0;
   operator = "-";
   document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = storedValue;
+  document.getElementById("operator").innerHTML = "&nbsp;-";
 }
 function multiplication() {
   storedValue = parseFloat(result);
   result = 0;
   operator = "*";
   document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = storedValue;
+  document.getElementById("operator").innerHTML = "&nbsp;x";
 }
 function division() {
   storedValue = parseFloat(result);
   result = 0;
   operator = "/";
   document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = storedValue;
+  document.getElementById("operator").innerHTML = "&nbsp;/";
 }
 
 //Equals
 function equals() {
   if (operator === "+") {
     result = storedValue + result;
-    operator ="";
-    document.getElementById("result").innerHTML = result;
   } else if (operator === "-") {
     result = storedValue - result;
-    operator = "";
-    document.getElementById("result").innerHTML = result;
   } else if (operator === "*") {
     result = storedValue * result;
-    operator = "";
-    document.getElementById("result").innerHTML = result;
   } else if (operator === "/") {
     result = storedValue / result;
-    operator = "";
-    document.getElementById("result").innerHTML = result;
   }
+  operator = "";
+  storedValue = 0;
+  document.getElementById("result").innerHTML = result;
+  document.getElementById("storedValue").innerHTML = "";
+  document.getElementById("operator").innerHTML = "";
 }

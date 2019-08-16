@@ -5,9 +5,11 @@
 </head>
 <body>
   <h1>Web Calculator</h1>
-  <div>
-    <p id="storedValue"> </p><p id="operator"></p>
-    <p id="result">0</p>
+  <div class="numScreen">
+    <div class="storedInfo">
+      <p id="storedValue"> </p><p id="operator"> </p>
+    </div>
+      <p id="result">0</p>
   </div>
   <div class="pad">
     <button class="numPad" onclick="digit1()">1</button>
@@ -19,15 +21,15 @@
     <button class="numPad" onclick="digit4()">4</button>
     <button class="numPad" onclick="digit5()">5</button>
     <button class="numPad" onclick="digit6()">6</button>
-    <button class="operator" onclick="multiplication()">x</button>
-    <button class="operator" onclick="division()">/</button>
+    <button class="operator" onclick="addition()">+</button>
+    <button class="operator" onclick="subtraction()">-</button>
   </div>
   <div class="pad">
     <button class="numPad" onclick="digit7()">7</button>
     <button class="numPad" onclick="digit8()">8</button>
     <button class="numPad" onclick="digit9()">9</button>
-    <button class="operator" onclick="addition()">+</button>
-    <button class="operator" onclick="subtraction()">-</button>
+    <button class="operator" onclick="multiplication()">x</button>
+    <button class="operator" onclick="division()">/</button>
   </div>
   <div class="pad">
     <button class="num0" onclick="digit0()">0</button>

@@ -1,8 +1,64 @@
+/* Heading */
+
+h1 {
+  font-size: 26px;
+  font-family: roboto;
+  font-weight: normal;
+  color: #171817;
+  padding: 5px;
+  margin: 0px;
+}
+
+body {
+     width: 250px;
+     margin-left:auto;
+     margin-right:auto;
+}
+
+/* Screen */
+
+.numScreen {
+  padding: 6px;
+  background-color: #EAEEF0;
+  height: 75px;
+  width: 227px;
+  border: 3px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: #C1CED2;
+  margin: 3px;
+}
+
+p {
+  margin: 0px;
+  font-family: roboto;
+}
+#result {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.storedInfo {
+  overflow: auto;
+  height: 30px;
+  margin-top: 10px;
+}
+#storedValue {
+  float: left;
+  color: grey;
+  padding-left: 10px;
+}
+#operator {
+  color: grey;
+  padding-left:10px;
+}
+
+/* Buttons */
+
 .pad {
   overflow: auto;
 }
 
-/* Buttons */
 button {
   background-color: #0B5872;
   border: none;
@@ -14,10 +70,15 @@ button {
   text-decoration: none;
   height: 50px;
   float: left;
-  border: 2px;
+  border: 3px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 6px;
   border-color: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #4D8598;
 }
 .numPad {
   width: 50px;
@@ -29,12 +90,21 @@ button {
   width: 50px;
   background-color: #1D4C5C;
 }
+.operator:hover {
+  background-color: #567985;
+}
 .ce {
   width: 100px;
   background-color: #AE3451;
   color: #FDEEF1;
 }
+.ce:hover {
+  background-color: #BC5870;
+}
 .equals {
   width: 100px;
   background-color: #1D4C5C;
+}
+.equals:hover {
+  background-color: #567985;
 }
